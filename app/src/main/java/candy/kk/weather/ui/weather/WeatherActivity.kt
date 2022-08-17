@@ -46,7 +46,7 @@ class WeatherActivity : AppCompatActivity() {
             if (weather != null) {
                 showWeatherInfo(weather)
             } else {
-                Toast.makeText(this, " 无法成功获取天气信息", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "无法成功获取天气信息", Toast.LENGTH_SHORT).show()
                 result.exceptionOrNull()?.printStackTrace()
             }
         })
@@ -58,7 +58,7 @@ class WeatherActivity : AppCompatActivity() {
             if (weather != null) {
                 showWeatherInfo(weather)
             } else {
-                Toast.makeText(this, " 无法成功获取天气信息", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "无法成功获取天气信息", Toast.LENGTH_SHORT).show()
                 result.exceptionOrNull()?.printStackTrace()
             }
             binding.swipeRefresh.isRefreshing = false
@@ -97,10 +97,10 @@ class WeatherActivity : AppCompatActivity() {
         val realtime = weather.realtime
         val daily = weather.daily
         // 填充now.xml布局中的数据
-        val currentTempText = "${realtime.temperature.toInt()}  ℃ "
+        val currentTempText = "${realtime.temperature.toInt()} ℃ "
         binding.nowBind.currentTemp.text = currentTempText
         binding.nowBind.currentSky.text = getSky(realtime.skycon).info
-        val currentPM25Text = " 空气指数${realtime.airQuality.aqi.chn.toInt()}"
+        val currentPM25Text = "空气指数 ${realtime.airQuality.aqi.chn.toInt()}"
         binding.nowBind.currentAQI.text = currentPM25Text
         binding.nowBind.nowLayout.setBackgroundResource(getSky(realtime.skycon).bg)
         // 填充forecast.xml布局中的数据

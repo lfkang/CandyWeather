@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">CandyWeather</string>
+    <string name="forecast">Forecast</string>
+    <string name="input_place">Enter location</string>
+    <string name="life_index">Life Index</string>
+    <string name="cold_risk">Cold Risk</string>
+    <string name="dressing">Dressing</string>
+    <string name="uv_index">UV Index</string>
+    <string name="car_washing">Car Washing</string>
 </resources>
