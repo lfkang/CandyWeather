@@ -23,7 +23,7 @@ import java.util.*
 
 class WeatherActivity : AppCompatActivity() {
     lateinit var binding: ActivityWeatherBinding
-    val viewModel by lazy { ViewModelProvider(this).get(WeatherViewModel::class.java) }
+    val viewModel by lazy { ViewModelProvider(this)[WeatherViewModel::class.java] }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityWeatherBinding.inflate(layoutInflater)
